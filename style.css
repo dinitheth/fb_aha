@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Or a more playful font if available */
+    background-color: #f0f8ff; /* Light AliceBlue */
+    color: #333;
+    text-align: center;
+    font-size: 16px; /* Base font size */
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Changed from 100vw for consistency with html,body height */
+    height: 100%; /* Changed from 100vh */
+    background-color: #7df9ff; /* More vibrant: Electric Blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add some padding */
+}
+
+#logo {
+    font-size: 2.8em; /* Relative to base font size */
+    font-weight: bold;
+    color: #ff6347; /* Tomato color for fun */
+    margin-bottom: 30px;
+    font-family: 'Comic Sans MS', 'Chalkduster', 'cursive', sans-serif; /* Fun font with fallback */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle text shadow */
+}
+
+#fb-login-button {
+    background-color: #1877f2; /* Facebook blue */
+    color: white;
+    padding: 15px 25px; /* Increased padding */
+    border: none;
+    border-radius: 8px; /* More rounded */
+    font-size: 1.1em; /* Relative font size */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: all 0.2s ease-in-out; /* Smooth transition for hover/active */
+}
+
+#fb-login-button:hover {
+    background-color: #166fe5;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+#fb-login-button:active {
+    transform: translateY(1px); /* Slight press effect */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+
+#main-app-content {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    text-align: center;
+    max-width: 600px; /* Constrain width on larger screens by default */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#prank-image {
+    max-width: 90%; /* Responsive width with padding */
+    height: auto;
+    border: 3px solid #ffb6c1; /* LightPink border */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow */
+    margin-bottom: 25px; /* Increased margin */
+    background-color: #fff; /* Add a white background in case image transparency is weird */
+}
+
+
+#profile-pic { /* Kept for debugging, can be removed if not used */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px auto; /* Centering if it were visible */
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    align-items: center; /* Center buttons in column */
+    gap: 15px;
+}
+
+.action-buttons button {
+    padding: 12px 25px; /* Consistent padding */
+    font-size: 1em; /* Relative font size */
+    min-width: 200px; /* Minimum width for better tap targets */
+    border: none;
+    border-radius: 8px; /* More rounded */
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.action-buttons button:hover {
+    transform: translateY(-2px); /* Lift effect */
+    opacity: 0.9;
+}
+
+.action-buttons button:active {
+    transform: translateY(1px); /* Press effect */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+
+#try-again-button {
+    background-color: #5cb85c; /* Green */
+}
+
+#try-again-button:hover {
+    background-color: #4cae4c;
+}
+
+#share-fb-button {
+    background-color: #3b5998; /* Facebook dark blue */
+}
+
+#share-fb-button:hover {
+    background-color: #334d84;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    #logo {
+        font-size: 3.5em; /* Larger logo on bigger screens */
+    }
+
+    #prank-image {
+        max-width: 450px; /* Fixed max-width for larger screens */
+    }
+
+    .action-buttons {
+        flex-direction: row; /* Buttons side-by-side on larger screens */
+        justify-content: center; /* Center them horizontally */
+    }
+
+    .action-buttons button {
+        min-width: 180px; /* Adjust width if needed */
+    }
+
+    #main-app-content {
+        padding: 40px; /* More padding on larger screens */
+    }
+}

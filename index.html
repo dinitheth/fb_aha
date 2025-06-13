@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PrankApp!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+    <div id="loading-screen">
+        <div id="logo">PrankApp!</div>
+        <button id="fb-login-button">Login with Facebook</button>
+    </div>
+
+    <div id="main-app-content" style="display:none;">
+        <p>Login Successful! User data will appear here.</p>
+        <img id="profile-pic" src="#" alt="Profile Picture" style="display:none;"> <!-- Can be kept for debugging -->
+        <p id="user-name"></p> <!-- Can be kept for debugging -->
+        <img id="prank-image" src="#" alt="Prank Image" style="display:none; max-width: 100%; height: auto;">
+        <div class="action-buttons">
+            <button id="try-again-button">Try Again</button>
+            <button id="share-fb-button">Share on Facebook</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
